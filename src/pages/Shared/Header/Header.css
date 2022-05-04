@@ -1,0 +1,10 @@
+nav {
+    background-color: cornflowerblue;
+}
+
+nav a {
+    color: aqua;
+    text-decoration: none;
+    margin: 0 10px;
+    border: none;
+}
