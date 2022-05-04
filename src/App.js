@@ -7,9 +7,10 @@ import Login from './pages/Login/Login';
 import About from './pages/About/About';
 import Blogs from './pages/Blogs/Blogs';
 import NotFound from './pages/NotFound/NotFound';
+import Footer from './pages/Shared/Footer/Footer'
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />}  ></Route>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />}  ></Route>
         <Route path='*' element={<NotFound />}  ></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
