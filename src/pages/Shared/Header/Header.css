@@ -1,10 +1,13 @@
 nav {
-    background-color: cornflowerblue;
+    background-color: rgba(28, 43, 53, 1);
 }
 
 nav a {
-    color: aqua;
+    color: white;
     text-decoration: none;
     margin: 0 10px;
-    border: none;
+}
+
+nav a:hover {
+    color: aquamarine;
 }
