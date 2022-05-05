@@ -6,7 +6,7 @@ const Review = () => {
     return (
         <div className='container'>
             <h1 className='text-center p-5 text-info'>Review From The Customer</h1>
-            <div class="row row-cols-1 row-cols-lg-4 g-4">
+            <div class="row row-cols-1 row-cols-lg-4 g-4 mb-4">
                 <div class="col">
                     <div class="card h-100 text-center">
                         <div class="card-header">Review</div>
