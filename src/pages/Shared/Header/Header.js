@@ -18,6 +18,13 @@ const Header = () => {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link to='/home'>Home</Link>
+                            {user &&
+                                <>
+                                    <Link to='/addItem'>Add Item</Link>
+                                    <Link to='/myItem'>MyItem</Link>
+                                    <Link to='/manageInventory'>Manage Inventory</Link>
+                                </>
+                            }
                         </li>
                         <li className="nav-item">
                             <Link to='/blogs'>Blogs</Link>
@@ -26,7 +33,8 @@ const Header = () => {
                             <Link to='/about'>About</Link>
                         </li>
                         <li className="nav-item">
-                            {user ? <div><span className='text-light' >{user?.displayName}</span> <button onClick={() => signOut(auth)} >SignOut</button></div> :
+
+                            {user ? <div> <button onClick={() => signOut(auth)} >SignOut</button></div> :
                                 <Link to='/login'>Login</Link>
                             }
                         </li>

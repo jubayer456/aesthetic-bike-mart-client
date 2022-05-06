@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
-    const { img, _id, price, description, name } = service;
+    const { img, _id, price, description, name, quantity } = service;
     const navigate = useNavigate();
     const nevigateToOrder = id => {
         navigate(`/service/${id}`);
@@ -14,6 +14,7 @@ const Service = ({ service }) => {
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <h6>price: {price}</h6>
+                    <h6>quantity: {quantity}</h6>
                     <p className="card-text">{description}</p>
                 </div>
                 <div className='p-3'>

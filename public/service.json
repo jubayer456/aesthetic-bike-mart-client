@@ -1,65 +1,74 @@
 [
     {
-        "id": 1,
         "name": "GPX-Raptor",
         "price": "15000 $",
         "description": "Meet the revolutionary GPX-RAPTOR Dual ABS with the best power-to-weight ratio and acceleration in the 147.3 cm3 class, plus nimble handling and great",
-        "img": "https://i.ibb.co/jrGw9LD/GPX-Raptor-165.jpg"
+        "img": "https://i.ibb.co/jrGw9LD/GPX-Raptor-165.jpg",
+        "quantity": 10,
+        "suplier": "Khaled iqbal"
     },
     {
-        "id": 2,
         "name": "Suzuki-Gixxer",
         "price": "2500 $",
         "description": "The Gixxer SF 150 features include full LED headlamp, split seats, and a fully digital instrument cluster.",
-        "img": "https://i.ibb.co/0D5cHhX/Suzuki-Gixxer-SF-Matt-Plus.jpg"
+        "img": "https://i.ibb.co/0D5cHhX/Suzuki-Gixxer-SF-Matt-Plus.jpg",
+        "quantity": 8,
+        "suplier": "sohel iqram"
     },
     {
-        "id": 3,
         "name": "Yamaha-R15",
         "price": "4000 $",
         "description": "The Yamaha YZF R15 V4 is powered by 155cc BS6 engine which develops a power of 18.1 bhp and a torque of 14.2 Nm. With both front and rear disc brakes",
-        "img": "https://i.ibb.co/KL4SVTj/Yamaha-R15-V4-Racing-Blue.jpg"
+        "img": "https://i.ibb.co/KL4SVTj/Yamaha-R15-V4-Racing-Blue.jpg",
+        "quantity": 10,
+        "suplier": "hasan  khan"
     },
     {
-        "id": 4,
         "name": "Suzuki-Gixxer",
         "price": "1800 $",
         "description": "The Suzuki-Gixxer-Classic-Plus features include full LED headlamp, split seats, and a fully digital instrument cluster.",
-        "img": "https://i.ibb.co/XZppZX1/Suzuki-Gixxer-Classic-Plus.jpg"
+        "img": "https://i.ibb.co/XZppZX1/Suzuki-Gixxer-Classic-Plus.jpg",
+        "quantity": 7,
+        "suplier": "Omayer hossain"
     },
     {
-        "id": 5,
         "name": "Generic-Shifter-125-Black",
         "price": "3000 $",
         "description": "eneric-Shifter-125-Black motorcycle with a price tag of estimate Rs. 1.60 Lakh. It is available in 1 variant and 4 colours. Powered by a bs6 engine.",
-        "img": "https://i.ibb.co/s2WGh4Z/Generic-Shifter-125-Black.jpg"
+        "img": "https://i.ibb.co/s2WGh4Z/Generic-Shifter-125-Black.jpg",
+        "quantity": 10,
+        "suplier": "Ozayer hedayet"
     },
     {
-        "id": 6,
         "name": "Yamaha-FZ-X",
         "price": "1500 $",
         "description": "The full new Yamaha-FZ-X comes with premium technology such as advanced Hyper Naked and a dynamic bike of the MT clan",
-        "img": "https://i.ibb.co/qrZjtjx/Yamaha-FZ-X.jpg"
+        "img": "https://i.ibb.co/qrZjtjx/Yamaha-FZ-X.jpg",
+        "quantity": 12,
+        "suplier": "salamn akbar"
     },
     {
-        "id": 7,
         "name": "Hero Maestro Edge",
         "price": "1200 $",
         "description": "Hero Maestro Edge 125 Series has been such a successful fleet over the last few years in the Bangladesh and Indian market. As a continuation Bajaj launched Pulsar NS160 in the Bangladesh market. The Mestro Edge NS 60 is a full naked sports bike. In this category bikes demand is very limited here in the local market.",
-        "img": "https://i.ibb.co/R4k4Rgf/hero-maestro-edge-125.jpg"
+        "img": "https://i.ibb.co/R4k4Rgf/hero-maestro-edge-125.jpg",
+        "quantity": 18,
+        "suplier": "Nuhan iqbal"
     },
     {
-        "id": 8,
         "name": "Bajaj Pulsar",
         "price": "1000 $",
         "description": "Bajaj Pulsar Series has been such a successful fleet over the last few years in the Bangladesh and Indian market. As a continuation Bajaj launched Pulsar NS160 in the Bangladesh market. The pulsar NS 60 is a full naked sports bike. In this category bikes demand is very limited here in the local market.",
-        "img": "https://i.ibb.co/fMjVjG4/bajaj-pulsar-ns-160.jpg"
+        "img": "https://i.ibb.co/fMjVjG4/bajaj-pulsar-ns-160.jpg",
+        "quantity": 10,
+        "suplier": "Zihadul Haque"
     },
     {
-        "id": 9,
         "name": "mahindra-centuro",
         "price": "1050 $",
         "description": "Mahindra Centuro N1 is the latest addition to the Centuro version. Its journey started simultaneously in the market of India and Bangladesh. Mahindra's bikes also have some unique features, such as the Remote Flip key with key light and bike to prevent theft",
-        "img": "https://i.ibb.co/gz7VSpL/mahindra-centuro-n1.jpg"
+        "img": "https://i.ibb.co/gz7VSpL/mahindra-centuro-n1.jpg",
+        "quantity": 13,
+        "suplier": "Zamiul haque"
     }
 ]
