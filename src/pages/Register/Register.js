@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -9,8 +10,8 @@ const Register = () => {
     const [createUserWithEmailAndPassword,
         user,
         loading,
-        error] = useCreateUserWithEmailAndPassword(auth);
-
+        error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating] = useUpdateProfile(auth);
     const navigate = useNavigate();
     const location = useLocation();
     let from = location?.state?.from?.pathname || '/';
@@ -18,10 +19,14 @@ const Register = () => {
     if (error || error1) {
         errorElement = <p className='text-danger'>{error1} {error?.message}</p>
     }
-    if (loading) {
+    if (loading || updating) {
         return <Loading />
     }
-    const handelRegister = (event) => {
+    if (user) {
+        console.log(user);
+        navigate(from, { replace: true })
+    }
+    const handelRegister = async (event) => {
         event.preventDefault();
         const email = event.target.email.value;
         const password1 = event.target.password1.value;
@@ -30,16 +35,16 @@ const Register = () => {
         console.log(name, email, password1, password2);
         if (password1 === password2) {
             if (password1 >= 6) {
-                createUserWithEmailAndPassword(email, password2);
+                await createUserWithEmailAndPassword(email, password2);
+                await updateProfile({
+                    displayName: name
+                })
+                toast('Successfully Registered');
                 setError1('');
             }
         }
         else {
             setError1('password did not match');
-        }
-        if (user) {
-            console.log(user);
-            navigate(from, { replace: true })
         }
     }
     return (

@@ -8,6 +8,7 @@ import About from './pages/About/About';
 import Blogs from './pages/Blogs/Blogs';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/Shared/Footer/Footer'
+import RequiredAuth from './pages/RequiredAuth/RequiredAuth'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function App() {
@@ -20,7 +21,10 @@ function App() {
         <Route path='/login' element={<Login />}  ></Route>
         <Route path='/register' element={<Register />}  ></Route>
         <Route path='/about' element={<About />}  ></Route>
-        <Route path='/blogs' element={<Blogs />}  ></Route>
+        <Route path='/blogs' element={<RequiredAuth>
+          <Blogs />
+        </RequiredAuth>
+        }  ></Route>
         <Route path='*' element={<NotFound />}  ></Route>
       </Routes>
       <Footer></Footer>
