@@ -24,18 +24,12 @@ const SocialLogin = () => {
     }
     return (
         <div>
-            <div className="container">
-                <div className='row d-flex justify-content-center'>
-                    <div className="col-12 col-lg-8 d-flex justify-content-center">
-                        <div className='w-75 p-5 border border-secondery rounded' >
-                            {errorElement}
-                            <button onClick={() => signInWithGoogle()} className='d-block w-100 border-0 p-2'>
-                                <img src={google} alt="" />   Google</button> <br />
-                            <button onClick={() => signInWithGithub()} className='d-block w-100 border-0 p-2'>
-                                <img src={github} alt="" />  Github</button>
-                        </div>
-                    </div>
-                </div>
+            <div >
+                {errorElement}
+                <button onClick={() => signInWithGoogle()} className='d-block w-100 border-0 p-2'>
+                    <img src={google} alt="" />   Google</button> <br />
+                <button onClick={() => signInWithGithub()} className='d-block w-100 border-0 p-2'>
+                    <img src={github} alt="" />  Github</button>
             </div>
         </div>
     );
