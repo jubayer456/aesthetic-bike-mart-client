@@ -11,6 +11,7 @@ import Footer from './pages/Shared/Footer/Footer'
 import RequiredAuth from './pages/RequiredAuth/RequiredAuth'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Order from './pages/Order/Order';
 function App() {
   return (
     <div >
@@ -22,8 +23,10 @@ function App() {
         <Route path='/register' element={<Register />}  ></Route>
         <Route path='/about' element={<About />}  ></Route>
         <Route path='/blogs' element={<RequiredAuth>
-          <Blogs />
-        </RequiredAuth>
+          <Blogs />  </RequiredAuth>
+        }  ></Route>
+        <Route path='/service/:serviceId' element={<RequiredAuth>
+          <Order /> </RequiredAuth>
         }  ></Route>
         <Route path='*' element={<NotFound />}  ></Route>
       </Routes>
