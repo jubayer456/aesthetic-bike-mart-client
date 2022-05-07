@@ -18,10 +18,9 @@ const ManageItem = ({ inventory }) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    toast('Delete The Item');
+                    toast('Deleted The Item');
                 })
         }
-
     }
     return (
         <tr >
