@@ -4,7 +4,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const ManageItem = ({ inventory }) => {
-    const { _id, price, name, quantity, suplier } = inventory;
+    const { _id, price, name, quantity, suplier, email } = inventory;
 
     const handelRemove = id => {
         fetch(`http://localhost:5000/manageInventory/${_id}`, {
@@ -21,8 +21,8 @@ const ManageItem = ({ inventory }) => {
 
     }
     return (
-        <tr>
-            <td>{_id}</td>
+        <tr >
+            <td>{email}</td>
             <td>{name}</td>
             <td>{price}</td>
             <td>{quantity}</td>

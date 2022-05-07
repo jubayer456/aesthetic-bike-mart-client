@@ -11,13 +11,12 @@ const ManageItems = () => {
             .then(data => setInventory(data))
     }, [inventory])
     return (
-        <div>
+        <div >
             <h1 className='text-success text-center'>All Items</h1>
-
             <table className="table table-dark table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
@@ -36,7 +35,7 @@ const ManageItems = () => {
                 </tbody>
             </table>
 
-            <button onClick={() => navigate('/addItem')} className='btn btn-success m-3 d-block mx-auto'>Manage Inventory</button>
+            <button onClick={() => navigate('/addItem')} className='btn btn-success m-3 d-block mx-auto'>Add Items</button>
 
         </div>
     );
