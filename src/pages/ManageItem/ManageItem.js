@@ -7,17 +7,20 @@ const ManageItem = ({ inventory }) => {
     const { _id, price, name, quantity, suplier, email } = inventory;
 
     const handelRemove = id => {
-        fetch(`http://localhost:5000/manageInventory/${_id}`, {
-            method: "DELETE",
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify()
-        })
-            .then(res => res.json())
-            .then(data => {
-                toast('Delete The Item');
+        const confirm = window.confirm('Are you sure to delete this item?');
+        if (confirm) {
+            fetch(`http://localhost:5000/manageInventory/${_id}`, {
+                method: "DELETE",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify()
             })
+                .then(res => res.json())
+                .then(data => {
+                    toast('Delete The Item');
+                })
+        }
 
     }
     return (
