@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ManageItem from '../ManageItem/ManageItem';
 
 const ManageItems = () => {
     const [inventory, setInventory] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         fetch('http://localhost:5000/manageInventory')
             .then(res => res.json())
@@ -33,6 +35,8 @@ const ManageItems = () => {
 
                 </tbody>
             </table>
+
+            <button onClick={() => navigate('/addItem')} className='btn btn-success m-3 d-block mx-auto'>Manage Inventory</button>
 
         </div>
     );

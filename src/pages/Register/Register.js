@@ -14,7 +14,6 @@ const Register = () => {
     const [updateProfile, updating] = useUpdateProfile(auth);
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location?.state?.from?.pathname || '/';
     let errorElement;
     if (error || error1) {
         errorElement = <p className='text-danger'>{error1} {error?.message}</p>
@@ -24,7 +23,7 @@ const Register = () => {
     }
     if (user) {
         console.log(user);
-        navigate(from, { replace: true })
+        navigate('/home');
     }
     const handelRegister = async (event) => {
         event.preventDefault();
