@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Order = () => {
     const { serviceId } = useParams('');
     const [order, setOrder] = useState({});
     const navigate = useNavigate();
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${serviceId}`)
+        fetch(`https://powerful-wave-79401.herokuapp.com/service/${serviceId}`)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [order]);
@@ -16,7 +17,7 @@ const Order = () => {
         const quantity = order.quantity - 1;
         if (quantity > -1) {
             const updateUser = { quantity };
-            fetch(`http://localhost:5000/service/${serviceId}`, {
+            fetch(`https://powerful-wave-79401.herokuapp.com/service/${serviceId}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -35,7 +36,7 @@ const Order = () => {
         event.preventDefault();
         const quantity = event.target.quantity.value;
         const updateUser = { quantity };
-        fetch(`http://localhost:5000/service/${serviceId}`, {
+        fetch(`https://powerful-wave-79401.herokuapp.com/service/${serviceId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -54,6 +55,7 @@ const Order = () => {
     }
     return (
         <div className='container'>
+            <PageTitle title='ServiceDetails'></PageTitle>
             <div className="row d-flex justify-content-center g-4">
                 <div className="col-lg-8 d-flex justify-content-center">
                     <div className='w-75 text-center pb-4'>

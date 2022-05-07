@@ -1,8 +1,10 @@
 import React from 'react';
 import about from '../../img/About .jpg'
+import PageTitle from '../Shared/PageTitle/PageTitle';
 const About = () => {
     return (
         <div className='container'>
+            <PageTitle title='About'></PageTitle>
             <h1 className='text-center p-5 m-3'>About Aesthetic bike mart</h1>
             <div className="row g-5 mb-5 pb-5 pt-2 d-flex align-items-center">
                 <div className="col-12 col-lg-7">

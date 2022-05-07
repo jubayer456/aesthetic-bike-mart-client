@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 const Login = () => {
@@ -46,6 +47,7 @@ const Login = () => {
     }
     return (
         < div className='container mb-5' >
+            <PageTitle title='Login'></PageTitle>
             <h2 className='text-danger text-center p-5'> Please Login here</h2>
             <div className='row d-flex justify-content-center'>
                 <div className="col-12 col-lg-8 d-flex justify-content-center">

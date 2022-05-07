@@ -9,7 +9,7 @@ const ManageItem = ({ inventory }) => {
     const handelRemove = id => {
         const confirm = window.confirm('Are you sure to delete this item?');
         if (confirm) {
-            fetch(`http://localhost:5000/manageInventory/${_id}`, {
+            fetch(`https://powerful-wave-79401.herokuapp.com/manageInventory/${_id}`, {
                 method: "DELETE",
                 headers: {
                     'content-type': 'application/json'

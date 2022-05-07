@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
 const Register = () => {
     const [error1, setError1] = useState([]);
@@ -13,7 +14,6 @@ const Register = () => {
         error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating] = useUpdateProfile(auth);
     const navigate = useNavigate();
-    const location = useLocation();
     let errorElement;
     if (error || error1) {
         errorElement = <p className='text-danger'>{error1} {error?.message}</p>
@@ -48,6 +48,7 @@ const Register = () => {
     }
     return (
         < div className='container' >
+            <PageTitle title='Register'></PageTitle>
             <h2 className='text-danger text-center p-5'> Please Register here</h2>
             <div className='row d-flex justify-content-center'>
                 <div className="col-12 col-lg-8 d-flex justify-content-center">

@@ -3,13 +3,13 @@ import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
-    console.log(user);
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/manageInventory', {
+        fetch('https://powerful-wave-79401.herokuapp.com/manageInventory', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -25,6 +25,7 @@ const AddItem = () => {
     }
     return (
         < div className='container mb-5' >
+            <PageTitle title='AddItem'></PageTitle>
             <h2 className='text-danger text-center p-5'>Add New Item</h2>
             <div className='row d-flex justify-content-center'>
                 <div className="col-12 col-lg-8 d-flex justify-content-center">

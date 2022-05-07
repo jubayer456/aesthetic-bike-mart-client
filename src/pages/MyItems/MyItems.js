@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import ManageItem from '../ManageItem/ManageItem';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 const MyItems = () => {
     const [inventory, setInventory] = useState([]);
     const [user] = useAuthState(auth);
     /* useEffect(() => {
-        fetch(`http://localhost:5000/manageInventory?email=${user.email}`)
+        fetch(`https://powerful-wave-79401.herokuapp.com/manageInventory?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -16,7 +17,7 @@ const MyItems = () => {
     }, [user, inventory]); */
     useEffect(() => {
         const getOrder = async () => {
-            const url = `http://localhost:5000/manageInventory?email=${user.email}`;
+            const url = `https://powerful-wave-79401.herokuapp.com/manageInventory?email=${user.email}`;
             const { data } = await axios.get(url);
             console.log(data);
             setInventory(data);
@@ -25,6 +26,7 @@ const MyItems = () => {
     }, [user, inventory]);
     return (
         <div>
+            <PageTitle title='MyItem'></PageTitle>
             <h1 className='text-success text-center'>My Items</h1>
             <table className="table table-dark table-hover">
                 <thead>
