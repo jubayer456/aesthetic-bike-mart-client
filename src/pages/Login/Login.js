@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -22,23 +23,24 @@ const Login = () => {
         return <Loading />;
     }
     if (user) {
-        console.log(user);
         navigate(from, { replace: true })
     }
     if (error) {
         errorElement = <p className='text-danger'>{error?.message}</p>
     }
-    const handelLogin = event => {
+    const handelLogin = async event => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        // const { data } = await axios.post('http://localhost:5000/login', { email });
+        // localStorage.setItem('accessToken', data.accessToken);
+        // navigate(from, { replace: true })
     }
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            console.log(email);
             toast('send email');
         }
         else {

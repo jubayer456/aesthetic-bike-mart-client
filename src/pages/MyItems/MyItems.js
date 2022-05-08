@@ -7,22 +7,13 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 const MyItems = () => {
     const [inventory, setInventory] = useState([]);
     const [user] = useAuthState(auth);
-    /* useEffect(() => {
-        fetch(`https://powerful-wave-79401.herokuapp.com/manageInventory?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setInventory(data);
-            })
-    }, [user, inventory]); */
     useEffect(() => {
-        const getOrder = async () => {
+        const getInventory = async () => {
             const url = `https://powerful-wave-79401.herokuapp.com/manageInventory?email=${user.email}`;
             const { data } = await axios.get(url);
-            console.log(data);
             setInventory(data);
         }
-        getOrder();
+        getInventory();
     }, [user, inventory]);
     return (
         <div>
